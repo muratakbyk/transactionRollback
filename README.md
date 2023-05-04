@@ -10,4 +10,3 @@ You can access the related article at:  <a href="https://medium.com/@murathanakb
 
 
 
-![Başlıksız-1](https://user-images.githubusercontent.com/64757434/236273592-b3986722-0262-44f5-8713-5a6e87e9139c.png)
