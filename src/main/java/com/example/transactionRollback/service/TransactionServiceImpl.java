@@ -37,10 +37,9 @@ public class TransactionServiceImpl implements TransactionService {
 
   @Override
   public String getBalance(long accId) {
-    Account acc = accountRepository.findById(accId).get();
-    String balance = String.valueOf(acc.getBalance());
-    logger.info("My balance after transaction roll back: " +
-      accountRepository.getAccountById(accId).getBalance());
+    myAcc = accountRepository.findById(accId).get();
+    String balance = String.valueOf(myAcc.getBalance());
+    logger.info("My balance after transaction roll back: " + balance);
     return balance;
   }
 }
