@@ -18,7 +18,7 @@ public class TransactionServiceImpl implements TransactionService {
 
   @Override
   @Transactional(rollbackFor = Exception.class)
-  public void moneyTransfer(double transferAmount, long myAccId, long receiverAccId)  {
+  public void moneyTransfer(double transferAmount, long myAccId, long recipientAccId)  {
     myAcc = accountRepository.getAccountById(myAccId);
 
     if(myAcc.getBalance() >= transferAmount){
@@ -30,8 +30,8 @@ public class TransactionServiceImpl implements TransactionService {
         // Saving my new balance to the Database
 
         logger.info("My new balance: " + accountRepository.getAccountById(myAccId).getBalance());
-        Account receiverAcc = accountRepository.findById(receiverAccId).get();
-        // Since there is no receiver Account an exception will occur here
+        Account recipient = accountRepository.findById(recipientAccId).get();
+        // Since there is no recipient Account an exception will occur here
     }
   }
 

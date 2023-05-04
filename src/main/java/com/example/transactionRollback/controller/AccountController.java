@@ -14,8 +14,8 @@ public class AccountController {
   TransactionService transactionService;
 
   @PostMapping("/moneyTransfer")
-  public void moneyTransfer(@RequestParam double transferAmount, @RequestParam long myAccId, @RequestParam long receiverAccId){
-    transactionService.moneyTransfer(transferAmount,myAccId,receiverAccId);
+  public void moneyTransfer(@RequestParam double transferAmount, @RequestParam long myAccId, @RequestParam long recipientAccId){
+    transactionService.moneyTransfer(transferAmount,myAccId,recipientAccId);
   }
 
   @GetMapping("/getBalance")
