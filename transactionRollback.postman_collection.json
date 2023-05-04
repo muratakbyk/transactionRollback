@@ -1,0 +1,68 @@
+{
+	"info": {
+		"_postman_id": "7a513b9f-0fe0-4afd-b328-1e50b8cc493a",
+		"name": "transactionRollback",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15469106"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/moneyTransfer?transferAmount=100&myAccId=1&receiverAccId=0",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/moneyTransfer?transferAmount=100&myAccId=1&receiverAccId=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"moneyTransfer"
+					],
+					"query": [
+						{
+							"key": "transferAmount",
+							"value": "100"
+						},
+						{
+							"key": "myAccId",
+							"value": "1"
+						},
+						{
+							"key": "receiverAccId",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/getBalance?accId=1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/getBalance?accId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getBalance"
+					],
+					"query": [
+						{
+							"key": "accId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
